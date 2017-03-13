@@ -31,10 +31,10 @@ After this you should configure FreeTDS driver:
 	Note: enter "Driver = <path_to_libtdsodbc.so>" for your libtdsodbc.so file location.
 
 2. follow this commands:
-	
-	cd <path_to_tds.driver.template_file>
 
-	sudo odbcinst -i -d -f tds.driver.template 
+		cd <path_to_tds.driver.template_file>
+		
+		sudo odbcinst -i -d -f tds.driver.template 
 
 
 Replace SQL driver on FreeTDS fo Linux/Mac OS.
