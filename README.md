@@ -1,7 +1,8 @@
-Introduction
+#Introduction
+
 This document will be useful for configuration of uploading and downloading publishers and adUnits from database.
 
-Enviroment:
+#Enviroment
 
 For uploading and downloading you should have:
 
@@ -11,16 +12,17 @@ For uploading and downloading you should have:
 
 	unixODBC:
 
-	brew install unixodbc
+		brew install unixodbc
 
 	FreeTDS driver (with ODBC):
 	
-	brew install freetds --with-unixodbc)
+		brew install freetds --with-unixodbc)
 
+#Configuring
 
 After this you should configure FreeTDS driver:
 
-	create tds.driver.template file with this text:
+1. create tds.driver.template file with this text:
 
 		[FreeTDS]
 		Description = v0.63 with protocol v8.0
@@ -28,7 +30,7 @@ After this you should configure FreeTDS driver:
 	
 	Note: enter "Driver = <path_to_libtdsodbc.so>" for your libtdsodbc.so file location.
 
-	follow this commands:
+2. follow this commands:
 	
 	cd <path_to_tds.driver.template_file>
 	sudo odbcinst -i -d -f tds.driver.template 
@@ -36,9 +38,9 @@ After this you should configure FreeTDS driver:
 
 Replace SQL driver on FreeTDS fo Linux/Mac OS.
 	
-	Open file dataswitch/db.py with help an any text editor.
+1. Open file dataswitch/db.py with help an any text editor.
 	
-	in the function	def make_conn_string() replace the variable driver on "FreeTDS".
+in the function	def make_conn_string() replace the variable driver on "FreeTDS".
 
 
 For install an additional packs you can just follow this command:
@@ -60,3 +62,4 @@ You can edit some fields, save this file as adunits.csv and run upload-adunits.p
 	"DONE: Processed [X] ad units"
 
 For editing publishers you can follow at the same flow like fod aduints.
+
