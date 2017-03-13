@@ -33,6 +33,7 @@ After this you should configure FreeTDS driver:
 2. follow this commands:
 	
 	cd <path_to_tds.driver.template_file>
+
 	sudo odbcinst -i -d -f tds.driver.template 
 
 
