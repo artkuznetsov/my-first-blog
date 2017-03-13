@@ -41,7 +41,7 @@ Replace SQL driver on FreeTDS fo Linux/Mac OS.
 	
 1. Open file dataswitch/db.py with help an any text editor.
 	
-in the function	def make_conn_string() replace the variable driver on "FreeTDS".
+2. in the function "def make_conn_string()" replace the variable driver on "FreeTDS".
 
 
 For install an additional packs you can just follow this command:
